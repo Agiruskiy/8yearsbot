@@ -10,7 +10,7 @@ def main():
 # ADD TOKEN
     my_bot = Updater('5133158394:AAGEXbJ_ZTrrD7Guv17g13eBSWmH6qsQ39Q')
     my_bot.dispatcher.add_handler(MessageHandler(Filters.regex('(8|[вВ].?[сС].?[мМ].?)\s+[лЛ].[тТ]|(2014)'), years))
-    my_bot.dispatcher.add_handler(MessageHandler(Filters.user_ids(773498806), kremlin))
+    my_bot.dispatcher.add_handler(MessageHandler(Filters.user(user_id = 773498806), kremlin))
     my_bot.start_polling()
     my_bot.idle()
 
