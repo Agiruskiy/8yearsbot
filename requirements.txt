@@ -1,1 +1,2 @@
 python-telegram-bot
+pytest~=7.0.1
