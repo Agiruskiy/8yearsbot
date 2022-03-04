@@ -9,7 +9,7 @@ def kremlin(update: Updater, context: CallbackContext):
 def main():
 # ADD TOKEN
     my_bot = Updater(TOKEN)
-    my_bot.dispatcher.add_handler(MessageHandler(Filters.regex('(([лЛгГ].[тТдД][aАуУ]?|[вВсС])\s*(2014|8|[вВ][оО][сС].?[мМ][ьЬъЪиИ]?)(ой)?|(8|[вВ]?[оО][сС].?[мМ][ьЬъЪиИ]?([оО][йЙ])?)\s*[лЛгГ].[тТдД][aАуУ]?)[^а-яa-z]'), years))
+    my_bot.dispatcher.add_handler(MessageHandler(Filters.regex('(([лЛгГ].[тТдД][aАуУ]?|[вВсС])\s*(2014|8|[вВ][оО][сС].?[мМ][ьЬъЪиИ]?)(ой)?|(8|[вВ]?[оО][сС].?[мМ][ьЬъЪиИ]?([оО][йЙ])?)\s*[лЛгГ].[тТдД][aАуУ]?)([^а-яa-z]|\Z)'), years))
     my_bot.dispatcher.add_handler(MessageHandler(Filters.user(user_id = 773498806), kremlin))
     my_bot.start_polling()
     my_bot.idle()
