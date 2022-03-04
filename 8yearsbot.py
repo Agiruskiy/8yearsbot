@@ -6,7 +6,7 @@ def years(update: Updater, context: CallbackContext):
 def main():
 # ADD TOKEN
     my_bot = Updater(TOKEN)
-    my_bot.dispatcher.add_handler(MessageHandler(Filters.regex('.*[Вв]оc[еи]мь.*[Лл]ет.*|.*8.*[Лл]ет.*'), years))
+    my_bot.dispatcher.add_handler(MessageHandler(Filters.regex('(8|[вВ].?[сС].?[мМ].?)\s+[лЛ].[тТ]|(2014)'), years))
     my_bot.start_polling()
     my_bot.idle()
 
